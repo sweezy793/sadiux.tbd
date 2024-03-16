@@ -32,11 +32,11 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className="py-10 flex justify-between items-center">
-      <h1 className="text-2xl font-bold underline underline-offset-8 decoration-red-400 -rotate-2">
-        Sarthak 👽
+    <nav className="py-10 flex justify-between items-center ">
+      <h1 className="text-2xl font-bold underline underline-offset-8 decoration-red-400 -rotate-3 z-10">
+        {"<Sarthak 👽/>"}
       </h1>
-      <div className="flex items-center gap-5">
+      <div className="flex items-center gap-5 z-10">
         {socials.map((item, index) => {
           const Icon = item.icon;
           return (

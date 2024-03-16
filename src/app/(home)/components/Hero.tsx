@@ -1,3 +1,4 @@
+import { MovingBorderButton } from "@/components/ui/moving-border";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
@@ -5,7 +6,7 @@ import React from "react";
 const Hero = () => {
   return (
     <div className="min-h-[60vh] flex flex-col-reverse gap-16 lg:flex-row lg:gap-0 items-center justify-between">
-      <div className="space-y-10 text-center lg:text-left">
+      <div className="space-y-10 text-center lg:text-left z-10">
         <h1 className="text-4xl lg:text-7xl font-bold">
           Hello there{" "}
           <Image
@@ -16,11 +17,11 @@ const Hero = () => {
             alt="HelloThereKenobi"
           />
           <br />
-          <span className="underline underlin-offset-8 decoration-red-400">
+          <span className="underline underline-offset-8 decoration-red-500">
             {"I'm Sarthak Sarangi"}
           </span>
         </h1>
-        <p className="md:w-[50rem] text-lg text-gray-300">
+        <p className="text-lg text-gray-300">
           {`Your friendly neighborhood software developer working at Freshworks with a passion for all things tech.`}
           <br />
           {`By day, I'm crafting elegant solutions, but by night, I'm Batman(smh).`}
@@ -33,24 +34,33 @@ const Hero = () => {
           className="inline-block group"
         >
           <div>
-            <h1 className="text-3xl font-bold group-hover:text-red-400 transition-all">
+            <h1 className="text-3xl font-bold group-hover:text-red-500 transition-all">
               Contact Me 📫
             </h1>
-            <div className="w-40 h-2 bg-red-400 rounded-full "></div>
-            <div className="w-40 h-2 bg-indigo-400 rounded-full translate-x-2"></div>
+            <div className="w-40 h-2 bg-red-500 rounded-full "></div>
+            <div className="w-40 h-2 bg-violet-500 rounded-full translate-x-2"></div>
           </div>
         </Link>
       </div>
-      <div>
-        <div className="w-72 h-72 space-y-3 -rotate-[20deg]">
-          <div className="flex gap-3 translate-x-8">
-            <div className="w-36 h-36 rounded-full bg-red-400"></div>
-            <div className="w-0 h-0 border-t-[65px] border-t-transparent border-l-[100px] border-l-indigo-400 border-b-[65px] border-b-transparent"></div>
+      <div className="z-10 relative">
+        <div className="w-72 h-72 space-y-3 -rotate-[0deg] relative flex flex-col items-center">
+          <div className="flex gap-3 translate-x-6">
+            <div className="w-32 h-32 rounded-full bg-red-500"></div>
+            <div className="w-0 h-0 border-t-[65px] border-t-transparent border-l-[100px] border-l-violet-500 border-b-[65px] border-b-transparent"></div>
           </div>
-          <div className="flex gap-3 -translate-x-16">
-            <div className="w-0 h-0 border-t-[65px] border-t-transparent border-r-[100px] border-r-indigo-400 border-b-[65px] border-b-transparent"></div>
-            <div className="w-36 h-36 rounded-full bg-red-400"></div>
+          <div className="flex gap-3 -translate-x-6">
+            <div className="w-0 h-0 border-t-[65px] border-t-transparent border-r-[100px] border-r-violet-500 border-b-[65px] border-b-transparent"></div>
+            <div className="w-32 h-32 rounded-full bg-red-500"></div>
           </div>
+          <div className="glow absolute top-[50%] right-1/2 -z-10"></div>
+        </div>
+        <div className="absolute bottom-28  left-5 ">
+          <MovingBorderButton
+            borderRadius="1.5rem"
+            className="p-3 font-semibold"
+          >
+            <p>Hire me 💼</p>
+          </MovingBorderButton>
         </div>
       </div>
     </div>
