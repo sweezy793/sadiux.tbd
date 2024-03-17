@@ -1,10 +1,7 @@
 import React from "react";
-import {
-  GitHubLogoIcon,
-  LinkedInLogoIcon,
-  TwitterLogoIcon,
-  EnvelopeClosedIcon,
-} from "@radix-ui/react-icons";
+import { FaXTwitter } from "react-icons/fa6";
+import { SiGmail, SiGithub, SiLinkedin } from "react-icons/si";
+
 import Link from "next/link";
 
 const Navbar = () => {
@@ -12,22 +9,22 @@ const Navbar = () => {
     {
       label: "LinkedIn",
       url: "https://www.linkedin.com/in/sarthaks793/",
-      icon: LinkedInLogoIcon,
+      icon: SiLinkedin,
     },
     {
       label: "GitHub",
       url: "https://github.com/sweezy793",
-      icon: GitHubLogoIcon,
+      icon: SiGithub,
     },
     {
       label: "X",
       url: "https://twitter.com/AllonsyAl0nso",
-      icon: TwitterLogoIcon,
+      icon: FaXTwitter,
     },
     {
       label: "Mail",
       url: "",
-      icon: EnvelopeClosedIcon,
+      icon: SiGmail,
     },
   ];
 
