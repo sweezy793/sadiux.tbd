@@ -3,10 +3,12 @@ import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import { BackgroundBeams } from "../../components/ui/background-beams";
 import Skills from "./components/Skills";
+import Projects from "./components/Projects";
+import Footer from "./components/Footer";
 
 const page = () => {
   return (
-    <div className="min-h-[400vh] bg-black overflow-hidden w-full ">
+    <div className="min-h-screen bg-black overflow-hidden w-full ">
       <BackgroundBeams />
       <div className="max-w-7xl mx-auto p-5">
         <Navbar />
@@ -15,6 +17,8 @@ const page = () => {
       </div>
       <div className="max-w-7xl mx-auto p-5 mt-20">
         <Skills />
+        <Projects />
+        <Footer />
       </div>
     </div>
   );

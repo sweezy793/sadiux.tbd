@@ -3,8 +3,9 @@ import { FaXTwitter } from "react-icons/fa6";
 import { SiGmail, SiGithub, SiLinkedin } from "react-icons/si";
 
 import Link from "next/link";
+import { cn } from "@/lib/utils";
 
-const Navbar = () => {
+const Navbar = ({ className }: { className?: string }) => {
   const socials = [
     {
       label: "LinkedIn",
@@ -29,7 +30,12 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className="py-10 flex justify-between items-center ">
+    <nav
+      className={cn(
+        "py-10 flex justify-between items-center animate-move-down",
+        className
+      )}
+    >
       <h1 className="text-2xl font-bold underline underline-offset-8 decoration-red-400 -rotate-3 z-10">
         {"<Sarthak 👽/>"}
       </h1>
