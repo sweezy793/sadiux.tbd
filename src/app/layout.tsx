@@ -17,7 +17,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Sarthak Sarangi",
     description: "Sarthak Sarangi Developer Portfolio",
-    url: "http://localhost:3000/",
+    url: "https://sarthaksarangi.vercel.app",
     siteName: "Sarthak Sarangi",
     images: "/og.png",
     type: "website",

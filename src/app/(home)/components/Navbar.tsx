@@ -1,11 +1,18 @@
 import React from "react";
 import { FaXTwitter } from "react-icons/fa6";
+import { FaFileAlt } from "react-icons/fa";
 import { SiGmail, SiGithub, SiLinkedin } from "react-icons/si";
 
 import Link from "next/link";
 import { cn } from "@/lib/utils";
 
-const Navbar = ({ className }: { className?: string }) => {
+const Navbar = ({
+  className,
+  resumeFlag,
+}: {
+  className?: string;
+  resumeFlag?: boolean;
+}) => {
   const socials = [
     {
       label: "LinkedIn",
@@ -24,10 +31,18 @@ const Navbar = ({ className }: { className?: string }) => {
     },
     {
       label: "Mail",
-      url: "",
+      url: "mailto:sarthaks793@gmail.com",
       icon: SiGmail,
     },
   ];
+
+  if (resumeFlag) {
+    socials.push({
+      label: "Resume",
+      url: "/assets/SARTHAK_SARANGI_RESUME.pdf",
+      icon: FaFileAlt,
+    });
+  }
 
   return (
     <nav
@@ -43,7 +58,12 @@ const Navbar = ({ className }: { className?: string }) => {
         {socials.map((item, index) => {
           const Icon = item.icon;
           return (
-            <Link href={item.url} key={index} aria-label={item.label}>
+            <Link
+              href={item.url}
+              key={index}
+              aria-label={item.label}
+              target="_blank"
+            >
               <Icon className="w-5 h-5 hover:scale-150 transition-all " />
             </Link>
           );

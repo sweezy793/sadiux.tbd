@@ -29,6 +29,10 @@ export function MovingBorderButton({
   className?: string;
   [key: string]: any;
 }) {
+  const hireMeBtnHandler = () => {
+    window.open("/assets/SARTHAK_SARANGI_RESUME.pdf", "_blank");
+  };
+
   return (
     <Component
       className={cn(
@@ -38,6 +42,7 @@ export function MovingBorderButton({
       style={{
         borderRadius: borderRadius,
       }}
+      onClick={hireMeBtnHandler}
       {...otherProps}
     >
       <div
